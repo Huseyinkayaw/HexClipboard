@@ -13,10 +13,18 @@ A fully local **clipboard history** app for the macOS menu bar. It keeps the tex
 - Ignores content copied from password managers
 - Data is stored only in `~/Documents/HexClipboard`
 
+## Privacy & security
+- Makes no network connections.
+- History is stored only on this Mac in `~/Documents/HexClipboard` (readable only by your user account), excluded from Spotlight and iCloud sync. It is not encrypted, so pause recording before copying sensitive text if needed.
+- Skips anything copied from password managers (concealed/transient clipboard types).
+- Opens only `http`, `https` and `mailto` links.
+
 ## Download
 **[⬇ Download HexClipboard.dmg](https://github.com/Huseyinkayaw/HexClipboard/raw/main/release/HexClipboard.dmg)** — open it and drag **HexClipboard** into **Applications**.
 
 Requires macOS 14+ on Apple Silicon (M1 or later). The app is not notarized by Apple, so the first time you open it macOS will warn you: right-click the app → **Open** → **Open**, or go to **System Settings → Privacy & Security → Open Anyway**.
+
+SHA-256: `99f4ca746146563219d11d50ffb008c328c821733758eaec07a454c74854e35e`
 
 ## Build from source
 Requirements: macOS 14+, Apple Silicon, Xcode Command Line Tools.
@@ -43,6 +51,12 @@ macOS menü çubuğunda çalışan, tamamen yerel bir **pano geçmişi** uygulam
 - Parola yöneticilerinden kopyalananları kaydetmez
 - Veriler yalnızca `~/Documents/HexClipboard` klasöründe durur
 
-**İndir:** **[⬇ HexClipboard.dmg](https://github.com/Huseyinkayaw/HexClipboard/raw/main/release/HexClipboard.dmg)** — açın ve **HexClipboard**'i **Uygulamalar** klasörüne sürükleyin. macOS 14+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için ilk açılışta uyarı çıkar: uygulamaya sağ tıklayın → **Aç** → **Aç**, ya da **Sistem Ayarları → Gizlilik ve Güvenlik → Yine de Aç**.
+**Gizlilik ve güvenlik**
+- İnternete bağlanmaz.
+- Geçmiş yalnızca bu Mac'te, `~/Documents/HexClipboard` klasöründe durur (yalnızca sizin kullanıcınız okuyabilir); Spotlight ve iCloud eşitlemesi dışında tutulur. Şifrelenmez; hassas bir şey kopyalayacaksanız kaydı duraklatabilirsiniz.
+- Parola yöneticilerinden kopyalananları kaydetmez.
+- Yalnızca `http`, `https` ve `mailto` linklerini açar.
+
+**İndir:** **[⬇ HexClipboard.dmg](https://github.com/Huseyinkayaw/HexClipboard/raw/main/release/HexClipboard.dmg)** — açın ve **HexClipboard**'i **Uygulamalar** klasörüne sürükleyin. macOS 14+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için ilk açılışta uyarı çıkar: uygulamaya sağ tıklayın → **Aç** → **Aç**, ya da **Sistem Ayarları → Gizlilik ve Güvenlik → Yine de Aç**. SHA-256: `99f4ca746146563219d11d50ffb008c328c821733758eaec07a454c74854e35e`
 
 **Kaynaktan derleme:** macOS 14+, Apple Silicon ve Xcode Command Line Tools gerekir. `./build.sh` derler ve `/Applications`'a kurar; `--no-install` yalnızca derler, `--dmg` kurulum dosyası üretir. İlk açılışta doğrudan yapıştırma için **Erişilebilirlik** izni istenir.
