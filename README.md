@@ -13,7 +13,12 @@ A fully local **clipboard history** app for the macOS menu bar. It keeps the tex
 - Ignores content copied from password managers
 - Data is stored only in `~/Documents/HexClipboard`
 
-## Build & install
+## Download
+**[⬇ Download HexClipboard.dmg](https://github.com/Huseyinkayaw/HexClipboard/raw/main/release/HexClipboard.dmg)** — open it and drag **HexClipboard** into **Applications**.
+
+Requires macOS 14+ on Apple Silicon (M1 or later). The app is not notarized by Apple, so the first time you open it macOS will warn you: right-click the app → **Open** → **Open**, or go to **System Settings → Privacy & Security → Open Anyway**.
+
+## Build from source
 Requirements: macOS 14+, Apple Silicon, Xcode Command Line Tools.
 
 ```bash
@@ -38,4 +43,6 @@ macOS menü çubuğunda çalışan, tamamen yerel bir **pano geçmişi** uygulam
 - Parola yöneticilerinden kopyalananları kaydetmez
 - Veriler yalnızca `~/Documents/HexClipboard` klasöründe durur
 
-**Kurulum:** macOS 14+, Apple Silicon ve Xcode Command Line Tools gerekir. `./build.sh` derler ve `/Applications`'a kurar; `--no-install` yalnızca derler, `--dmg` kurulum dosyası üretir. İlk açılışta doğrudan yapıştırma için **Erişilebilirlik** izni istenir.
+**İndir:** **[⬇ HexClipboard.dmg](https://github.com/Huseyinkayaw/HexClipboard/raw/main/release/HexClipboard.dmg)** — açın ve **HexClipboard**'i **Uygulamalar** klasörüne sürükleyin. macOS 14+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için ilk açılışta uyarı çıkar: uygulamaya sağ tıklayın → **Aç** → **Aç**, ya da **Sistem Ayarları → Gizlilik ve Güvenlik → Yine de Aç**.
+
+**Kaynaktan derleme:** macOS 14+, Apple Silicon ve Xcode Command Line Tools gerekir. `./build.sh` derler ve `/Applications`'a kurar; `--no-install` yalnızca derler, `--dmg` kurulum dosyası üretir. İlk açılışta doğrudan yapıştırma için **Erişilebilirlik** izni istenir.
