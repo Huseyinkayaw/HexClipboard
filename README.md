@@ -22,7 +22,11 @@ A fully local **clipboard history** app for the macOS menu bar. It keeps the tex
 ## Download
 **[⬇ Download HexClipboard.dmg](https://github.com/Huseyinkayaw/HexClipboard/raw/main/release/HexClipboard.dmg)** — open it and drag **HexClipboard** into **Applications**.
 
-Requires macOS 14+ on Apple Silicon (M1 or later). The app is not notarized by Apple, so the first time you open it macOS will warn you: right-click the app → **Open** → **Open**, or go to **System Settings → Privacy & Security → Open Anyway**.
+Requires macOS 14+ on Apple Silicon (M1 or later). The app is not notarized by Apple, so macOS blocks the first launch ("Apple could not verify…"). Click **Done**, then go to **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to HexClipboard. Or run this once in Terminal:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/HexClipboard.app
+```
 
 SHA-256: `99f4ca746146563219d11d50ffb008c328c821733758eaec07a454c74854e35e`
 
@@ -57,6 +61,6 @@ macOS menü çubuğunda çalışan, tamamen yerel bir **pano geçmişi** uygulam
 - Parola yöneticilerinden kopyalananları kaydetmez.
 - Yalnızca `http`, `https` ve `mailto` linklerini açar.
 
-**İndir:** **[⬇ HexClipboard.dmg](https://github.com/Huseyinkayaw/HexClipboard/raw/main/release/HexClipboard.dmg)** — açın ve **HexClipboard**'i **Uygulamalar** klasörüne sürükleyin. macOS 14+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için ilk açılışta uyarı çıkar: uygulamaya sağ tıklayın → **Aç** → **Aç**, ya da **Sistem Ayarları → Gizlilik ve Güvenlik → Yine de Aç**. SHA-256: `99f4ca746146563219d11d50ffb008c328c821733758eaec07a454c74854e35e`
+**İndir:** **[⬇ HexClipboard.dmg](https://github.com/Huseyinkayaw/HexClipboard/raw/main/release/HexClipboard.dmg)** — açın ve **HexClipboard**'i **Uygulamalar** klasörüne sürükleyin. macOS 14+ ve Apple Silicon (M1 veya üstü) gerekir. Uygulama Apple tarafından onaylanmadığı (notarize edilmediği) için macOS ilk açılışı engeller ("Apple … doğrulayamadı"). **Bitti**'ye basın, sonra **Sistem Ayarları → Gizlilik ve Güvenlik**'te aşağı inip HexClipboard için **Yine de Aç**'a tıklayın. Ya da Terminal'de bir kez şunu çalıştırın: `xattr -dr com.apple.quarantine /Applications/HexClipboard.app` SHA-256: `99f4ca746146563219d11d50ffb008c328c821733758eaec07a454c74854e35e`
 
 **Kaynaktan derleme:** macOS 14+, Apple Silicon ve Xcode Command Line Tools gerekir. `./build.sh` derler ve `/Applications`'a kurar; `--no-install` yalnızca derler, `--dmg` kurulum dosyası üretir. İlk açılışta doğrudan yapıştırma için **Erişilebilirlik** izni istenir.
